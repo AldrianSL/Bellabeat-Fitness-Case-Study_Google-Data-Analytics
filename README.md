@@ -3,9 +3,9 @@
 
 ##### Date: December 18, 2024
 
-##### [Tableau Dashboard](https://public.tableau.com/app/profile/emily.liang7497/viz/BellabeatFitnessDataAnalysisDashboard/GiantDashboard)
+##### [Tableau (Progress)
 
-##### [Tableau Story Presentation to Skateholders](https://public.tableau.com/app/profile/emily.liang7497/viz/BellabeatFitnessDataAnalysis-GoogleDataAnalyticsCapstone/Story1)
+##### [Tableau (Progress)
 
 _The case study follows the six step data analysis process:_
 
