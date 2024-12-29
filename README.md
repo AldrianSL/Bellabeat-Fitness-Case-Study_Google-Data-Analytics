@@ -40,7 +40,17 @@ The dataset has 18 CSV. The data also follow a ROCCC approach:
 ⛔ The dataset has limitations:
 
 - Only 30 user data is available. The central limit theorem general rule of n≥30 applies and we can use the t test for statstic reference. However, a larger sample size is preferred for the analysis.
-- Upon further investigation with ```n_distinct()``` to check for unique user Id, the set has 33 user data from daily activity, 24 from sleep and only 8 from weight. There are 3 extra users and some users did not record their data for tracking daily activity and sleep. 
+- Upon further investigation with ```n_distinct()``` to check for unique user Id, the set has 33 user data from daily activity, 24 from sleep and only 8 from weight. There are 3 extra users and some users did not record their data for tracking daily activity and sleep.
+```
+daily_activity %>%
+  summarize(unique_id = n_distinct(Id))
+
+sleepDay_merged %>%
+  summarize(unique_id = n_distinct(Id))
+
+weightLogInfo_merged %>%
+  summarize(unique_id = n_distinct(Id))
+```
 - For the 8 user data for weight, 5 users manually entered their weight and 3 recorded via a connected wifi device (eg: wifi scale).
 - Most data is recorded from Tuesday to Thursday, which may not be comprehensive enough to form an accurate analysis. 
 
