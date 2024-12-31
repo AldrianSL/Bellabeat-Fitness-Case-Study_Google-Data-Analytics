@@ -96,6 +96,7 @@ ggplot(data=merged_data, aes(x=Weekday))+
 
 Merge the three tables:
 ```
+merged_activity_sleep <- merge(daily_activity, sleep_day, by = c("Id"), all=TRUE)
 merged_data <- merge(merged_activity_sleep, weight, by = c("Id"), all=TRUE)
 ```
 
