@@ -45,10 +45,10 @@ The dataset has 18 CSV. The data also follow a ROCCC approach:
 daily_activity %>%
   summarize(unique_id = n_distinct(Id))
 
-sleepDay_merged %>%
+sleep_day %>%
   summarize(unique_id = n_distinct(Id))
 
-weightLogInfo_merged %>%
+weight %>%
   summarize(unique_id = n_distinct(Id))
 ```
 - For the 8 user data for weight, 5 users manually entered their weight and 3 recorded via a connected wifi device (eg: wifi scale).
