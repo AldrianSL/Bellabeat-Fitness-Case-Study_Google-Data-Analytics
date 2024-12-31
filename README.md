@@ -87,7 +87,7 @@ merged_data$Weekday <- factor(merged_data$Weekday,
 ggplot(data=merged_data, aes(x=Weekday))+
   geom_bar(fill="steelblue")
 ```
-![image](https://user-images.githubusercontent.com/62857660/136279088-a4c39b17-990b-4d7f-9092-7307d1c9a37b.png)
+![Alt Text](relative/path/to/image)
 
 
 ⛔ From weekday's total asleep minutes, we can see the graph look almost **same** as the graph above! We can confirmed that most sleep data is also recorded during Tuesday to Thursday. This raised a question "how comprehensive are the data to form an accurate analysis?"
