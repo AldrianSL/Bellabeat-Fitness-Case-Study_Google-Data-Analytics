@@ -81,6 +81,9 @@ weight %>%
  
 Additional insight to be awared of is how often user record their data. We can see from the ```ggplot()``` bar graph that the data are greatest from Tuesday to Thursday. We need to investigate the data recording distribution. Monday and Friday are both weekdays, why isn't the data recordings as much as the other weekdays? 
 ```
+merged_data$Weekday <- factor(merged_data$Weekday, 
+                              levels = c("Monday", "Tuesday", "Wednesday", "Thursday", 
+                                         "Friday", "Saturday", "Sunday"))
 ggplot(data=merged_data, aes(x=Weekday))+
   geom_bar(fill="steelblue")
 ```
