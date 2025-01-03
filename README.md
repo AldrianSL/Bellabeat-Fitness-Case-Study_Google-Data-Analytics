@@ -1,4 +1,4 @@
-# CASE STUDY: Cyclistic bike-share
+# CASE STUDY: Cyclistic Bikeshare Analysis in 2023
 ##### Author: Aldrian Syafril Lubis
 
 ##### Date: December 18, 2024
@@ -27,7 +27,7 @@ To achieve this goal, I will:
 3. **Data Analysis:** Compare usage patterns between casual riders and annual members, such as ride frequency, trip duration, and popular locations.  
 4. **Data Visualization:** Create professional and easy-to-understand visualizations using tools like Tableau and Excel to support executive presentations.  
 5. **Recommendation Development:** Based on the insights gathered, I will propose targeted marketing strategies designed to convert more casual riders into annual members.
-6.  
+
 All recommendations I present will be backed by strong data insights and compelling visualizations to persuade executives in making strategic decisions for the company's growth.
 
 ## 1. Ask
