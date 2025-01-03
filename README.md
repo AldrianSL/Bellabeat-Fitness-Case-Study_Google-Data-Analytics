@@ -43,9 +43,6 @@ All recommendations I present will be backed by strong data insights and compell
 <p align="center">
   <img src="Screenshot_3-1-2025_19938_.jpeg" alt="Image" />
 </p>
-![Image](Screenshot_3-1-2025_19938_.jpeg)
-
-
 
 In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet 5,824 bicycles that are geotracked and locked into a network of 692 station across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
 
