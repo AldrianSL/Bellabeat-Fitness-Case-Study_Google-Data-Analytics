@@ -39,6 +39,9 @@ All recommendations I present will be backed by strong data insights and compell
 
 - **Cyclistic Executive Team:** A detail-oriented leadership group that will decide whether to approve the proposed marketing strategies based on the data insights and visualizations presented.
 
+## About the Company
+In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet 5,824 bicycles that are geotracked and locked into a network of 692 station across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime.
+Cyclistic's marketing strategy has focused on building general awareness and appealing to broad consumer segments through flexible pricing plans, including single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders, while annual membership holders are Cyclistic members. Finance analysts have determined that annual members are significantly more profitable than casual riders. While pricing flexibility helps attract a broad customer base, Marketing Director Lily Moreno believes that maximizing annual memberships will be crucial for future growth. Rather than targeting entirely new customers, she sees a strong opportunity to convert casual riders into annual members since they are already familiar with Cyclistic and have chosen it for their mobility needs.
 ## 1. Ask
 💡 **BUSINESS TASK: Analyze Fitbit data to gain insight and help guide marketing strategy for Bellabeat to grow as a global player.**
 
