@@ -30,6 +30,15 @@ To achieve this goal, I will:
 
 All recommendations I present will be backed by strong data insights and compelling visualizations to persuade executives in making strategic decisions for the company's growth.
 
+## Characters and teams
+- **Cyclistic:** A bike-share program in Chicago with over 5,800 bicycles and 600 docking stations. Cyclistic offers inclusive options like reclining bikes, hand tricycles, and cargo bikes, making it accessible for people with disabilities and those unable to use standard bikes. While most riders prefer traditional bikes, around 8% use the assistive options. Approximately 30% of users commute to work daily, while most ride for leisure.  
+
+- **Lily Moreno:** The Director of Marketing and my direct manager. She oversees the development of marketing campaigns and initiatives to promote Cyclistic's bike-share program through channels like email and social media.  
+
+- **Cyclistic Marketing Analytics Team:** A team of data analysts responsible for collecting, analyzing, and reporting data to guide Cyclistic’s marketing strategies. I joined this team six months ago and have been learning about the company’s mission and business objectives, as well as how I can contribute as a Junior Data Analyst.  
+
+- **Cyclistic Executive Team:** A detail-oriented leadership group that will decide whether to approve the proposed marketing strategies based on the data insights and visualizations presented.
+
 ## 1. Ask
 💡 **BUSINESS TASK: Analyze Fitbit data to gain insight and help guide marketing strategy for Bellabeat to grow as a global player.**
 
