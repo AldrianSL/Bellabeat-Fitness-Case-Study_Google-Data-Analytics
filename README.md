@@ -1,4 +1,4 @@
-# CASE STUDY: Bellabeat Fitness Data Analysis 
+# CASE STUDY: Cyclistic bike-share
 ##### Author: Aldrian Syafril Lubis
 
 ##### Date: December 18, 2024
@@ -17,7 +17,15 @@ _The case study follows the six step data analysis process:_
 ### 🧗‍♀️ [Act](#6-act)
 
 ## Scenario
-Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women. The company has 5 focus products: bellabeat app, leaf, time, spring and bellabeat membership. Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market. Our team have been asked to analyze smart device data to gain insight into how consumers are using their smart devices. The insights we discover will then help guide marketing strategy for the company. 
+I am a Junior Data Analyst on the Marketing Analyst team at Cyclistic, a bike-share company based in Chicago. The marketing director believes that the company’s future success depends on increasing the number of annual memberships. Therefore, my team is tasked with understanding the differences in bike usage patterns between casual riders and annual members.  
+In my role, I am responsible for analyzing Cyclistic's bike usage data, identifying trends, and presenting data-driven insights to support the development of effective marketing strategies aimed at converting casual riders into annual members.  
+To achieve this goal, I will:  
+1. **Data Collection:** Access historical bike usage data, including user type, ride duration, rental and return locations, and trip times.  
+2. **Data Cleaning and Preparation:** Ensure the data is accurate, free of anomalies, and ready for analysis.  
+3. **Data Analysis:** Compare usage patterns between casual riders and annual members, such as ride frequency, trip duration, and popular locations.  
+4. **Data Visualization:** Create professional and easy-to-understand visualizations using tools like Tableau and Excel to support executive presentations.  
+5. **Recommendation Development:** Based on the insights gathered, I will propose targeted marketing strategies designed to convert more casual riders into annual members. 
+All recommendations I present will be backed by strong data insights and compelling visualizations to persuade executives in making strategic decisions for the company's growth.
 
 ## 1. Ask
 💡 **BUSINESS TASK: Analyze Fitbit data to gain insight and help guide marketing strategy for Bellabeat to grow as a global player.**
