@@ -40,6 +40,9 @@ All recommendations I present will be backed by strong data insights and compell
 - **Cyclistic Executive Team:** A detail-oriented leadership group that will decide whether to approve the proposed marketing strategies based on the data insights and visualizations presented.
 
 ## About the Company
+<p align="center">
+  <img src="Screenshot_3-1-2025_19938_.jpeg" alt="Image" />
+</p>
 ![Image](Screenshot_3-1-2025_19938_.jpeg)
 
 
