@@ -57,8 +57,23 @@ Secondary stakeholders: Bellabeat marketing analytics team.
 
 ## 2. Prepare 
 Data Source: 
-We’ll be using Cyclistic’s historical bike trip data from 2023, which is publicly available ([Here](https://divvy-tripdata.s3.amazonaws.com/index.html)). The data is made available by Motivate International Inc. under this ([license](https://divvybikes.com/data-license-agreement)). The data is stored in spreadsheets. There are 12 .CSV files total:
+We’ll be using Cyclistic’s historical bike trip data from 2023, which is publicly available ([Here](https://divvy-tripdata.s3.amazonaws.com/index.html)). The data is made available by Motivate International Inc. under this ([license](https://divvybikes.com/data-license-agreement)). The data is stored in PostgreSQL.
+There are 12 .CSV files total:
+```
+01) 2023-01_divvy_trip-data.csv  
+02) 2023-02_divvy_trip-data.csv  
+03) 2023-03_divvy_trip-data.csv  
+04) 2023-04_divvy_trip-data.csv  
+05) 2023-05_divvy_trip-data.csv  
+06) 2023-06_divvy_trip-data.csv  
+07) 2023-07_divvy_trip-data.csv  
+08) 2023-08_divvy_trip-data.csv  
+09) 2023-09_divvy_trip-data.csv  
+10) 2023-10_divvy_trip-data.csv  
+11) 2023-11_divvy_trip-data.csv  
+12) 2023-12_divvy_trip-data.csv  
 
+```
 The dataset has 18 CSV. The data also follow a ROCCC approach:
 
 - Reliability: NOT reliable. This data only comes from 30 randomly chosen people, which is not a good representation of the more than 31 million people who use FitBit. This would mean a confidence level of 95% or 90% and a margin of error of 18% or 15%, which is not good. To get a high level of confidence (95%) and a low margin of error (5%), the sample size should be at least 10 times bigger than it is now. The Central Limit Theorem (CLT) says, however, that a sample size of 30 is the smallest sample size for which the CLT is still true. So, it’s good that at least this metric is met by the data that was given. Also, all of the data was collected in just one month, which is not long enough to find accurate and reliable trends. I would rather have at least a year’s worth of data to find meaningful trends and insights.
