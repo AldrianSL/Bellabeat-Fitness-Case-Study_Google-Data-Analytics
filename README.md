@@ -65,7 +65,7 @@ The main problem for the director of marketing and marketing analytics team is t
 By looking at the data, we will be able to first get a broad sense of certain patterns that are occurring in the two different groups. Understanding the differences will provide more accurate customer profiles for each group. These insights will help the marketing analytics team design high quality targeted marketing for converting casual riders into members. For the Cyclistic executive team, these insights will help Cyclistic maximize the number of annual members and will fuel future growth for the company.
 
 ## 2. Prepare 
-Data Source: 
+**Data Source:** 
 We’ll be using Cyclistic’s historical bike trip data from 2023, which is publicly available ([Here](https://divvy-tripdata.s3.amazonaws.com/index.html)). The data is made available by Motivate International Inc. under this ([license](https://divvybikes.com/data-license-agreement)). The data is stored in PostgreSQL.
 There are 12 .CSV files total:
 ```
