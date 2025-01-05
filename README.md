@@ -49,13 +49,13 @@ In 2016, Cyclistic launched a successful bike-share offering. Since then, the pr
 Cyclistic's marketing strategy has focused on building general awareness and appealing to broad consumer segments through flexible pricing plans, including single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders, while annual membership holders are Cyclistic members. Finance analysts have determined that annual members are significantly more profitable than casual riders. While pricing flexibility helps attract a broad customer base, Marketing Director Lily Moreno believes that maximizing annual memberships will be crucial for future growth. Rather than targeting entirely new customers, she sees a strong opportunity to convert casual riders into annual members since they are already familiar with Cyclistic and have chosen it for their mobility needs.
 
 ## 1. Ask
-💡 **BUSINESS TASK: Analyze Fitbit data to gain insight and help guide marketing strategy for Bellabeat to grow as a global player.**
+💡 **BUSINESS TASK: Analyze historical bike trip data to identify trends in how annual members and casual riders use Cyclistic bikes differently.**
 
-Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
+Primary stakeholders: Lily Moreno, Cyclistic executive team members.
 
 Secondary stakeholders: Bellabeat marketing analytics team.
 
-:dart:
+:dart: **Defining Problem**
 
 ## 2. Prepare 
 Data Source: 
