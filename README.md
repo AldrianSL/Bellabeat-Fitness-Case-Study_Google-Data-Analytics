@@ -55,7 +55,7 @@ Primary stakeholders: Urška Sršen and Sando Mur, executive team members.
 
 Secondary stakeholders: Bellabeat marketing analytics team.
 
-:Goal:
+:dart:
 
 ## 2. Prepare 
 Data Source: 
