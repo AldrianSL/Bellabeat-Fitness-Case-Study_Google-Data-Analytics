@@ -82,33 +82,18 @@ There are 12 .CSV files total:
 11) 2023-11_divvy_trip-data.csv  
 12) 2023-12_divvy_trip-data.csv  
 ```
-The dataset has 18 CSV. The data also follow a ROCCC approach:
+The data also must follow a ROCCC approach:
 
-- Reliability: NOT reliable. This data only comes from 30 randomly chosen people, which is not a good representation of the more than 31 million people who use FitBit. This would mean a confidence level of 95% or 90% and a margin of error of 18% or 15%, which is not good. To get a high level of confidence (95%) and a low margin of error (5%), the sample size should be at least 10 times bigger than it is now. The Central Limit Theorem (CLT) says, however, that a sample size of 30 is the smallest sample size for which the CLT is still true. So, it’s good that at least this metric is met by the data that was given. Also, all of the data was collected in just one month, which is not long enough to find accurate and reliable trends. I would rather have at least a year’s worth of data to find meaningful trends and insights.
-- Original: NOT original. The data set was made by people who answered an Amazon Mechanical Turk survey. It would have been better if FitBit had given the information itself.
-- Comprehensive: NOT comprehensive. The data are not complete because they are missing some information that would help make a more accurate analysis (e.g., sex, age, height, etc.). Also, more data from more people would help make the whole thing more complete. For example, a more accurate sample bias of the more than 30 million FitBit users would help. Again, the data was only collected over a two-month period, which is not enough. I would rather have data from the past year. Also, there is no way to know if the people who were chosen were chosen because of bias or if they were chosen at random. What were the rules for choosing the 30 people? It would be helpful to know more about the data.
-- Current: Data is from March 2016 to May 2016. Data is not current so the users habit may be different now. 
-- Cited: This data is Cited. 
-
-⛔ The dataset has limitations:
-
-- Only 30 user data is available. The central limit theorem general rule of n≥30 applies and we can use the t test for statstic reference. However, a larger sample size is preferred for the analysis.
-- Upon further investigation with ```n_distinct()``` to check for unique user Id, the set has 33 user data from daily activity, 24 from sleep and only 8 from weight. There are 3 extra users and some users did not record their data for tracking daily activity and sleep.
-```
-daily_activity %>%
-  summarize(unique_id = n_distinct(Id))
-
-sleep_day %>%
-  summarize(unique_id = n_distinct(Id))
-
-weight %>%
-  summarize(unique_id = n_distinct(Id))
-```
-- For the 8 user data for weight, 5 users manually entered their weight and 3 recorded via a connected wifi device (eg: wifi scale).
-- Most data is recorded from Tuesday to Thursday, which may not be comprehensive enough to form an accurate analysis. 
+- Reliability and Original: This data comes from real-time data from Cyclistic for the entire time of 2023 published by Motivate International Inc, this is the public data that contains accurate, complete and unbiased info on Cyclistic’s historical bike trips. It can be used to explore how different customer types are using Cyclistic bikes.
+- Comprehensive and Current: these sources contain all the data needed to understand the different ways members and casual riders use Cyclistic bikes. The data is from the past years. It is current and relevant to the task at hand. This is important because the usefulness of data decreases as time passes.
+- Cited: these sources are publicly available data provided by Cyclistic and the City of Chicago. Governmental agency data and vetted public data are typically good sources of data.
 
 ## 3. Process
 [Back to Top](#author-aldrian-syafril-lubis)
+
+# Data Cleaning and Manipulation
+
+**We use PostgreSQL**
 
 Examine the data, check for NA, and remove duplicates for three main tables: daily_activity, sleep_day and weight:
 ```
