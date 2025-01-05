@@ -91,7 +91,7 @@ The data also must follow a ROCCC approach:
 ## 3. Process
 [Back to Top](#author-aldrian-syafril-lubis)
 
-### Data Cleaning and Manipulation
+### :recycle: Data Cleaning and Manipulation
 
 **We use PostgreSQL**
 
