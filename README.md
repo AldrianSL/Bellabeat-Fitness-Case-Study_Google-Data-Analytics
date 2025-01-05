@@ -55,7 +55,7 @@ Primary stakeholders: Lily Moreno, Cyclistic executive team members.
 
 Secondary stakeholders: Bellabeat marketing analytics team.
 
-:dart: **DEFINING PROBLEM**
+:dart: **DEFINING PROBLEM** :
 The main problem for the director of marketing and marketing analytics team is this: Design marketing strategies aimed at converting Cyclistic’s casual riders into annual members. There are three questions that will guide this future marketing program. For my scope on this project, I will anlyze the first question:
 
 1) How do annual members and casual riders use Cyclistic bikes differently?
