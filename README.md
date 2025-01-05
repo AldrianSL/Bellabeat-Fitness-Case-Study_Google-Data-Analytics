@@ -57,7 +57,7 @@ Secondary stakeholders: Bellabeat marketing analytics team.
 
 ## 2. Prepare 
 Data Source: 
-We’ll be using Cyclistic’s historical bike trip data from 2023, which is publicly available [here]([URL lengkap](https://divvy-tripdata.s3.amazonaws.com/index.html)). The data is made available by Motivate International Inc. under this license. The data is stored in spreadsheets. There are 12 .CSV files total:
+We’ll be using Cyclistic’s historical bike trip data from 2023, which is publicly available ([Here](https://divvy-tripdata.s3.amazonaws.com/index.html)). The data is made available by Motivate International Inc. under this license. The data is stored in spreadsheets. There are 12 .CSV files total:
 
 The dataset has 18 CSV. The data also follow a ROCCC approach:
 
