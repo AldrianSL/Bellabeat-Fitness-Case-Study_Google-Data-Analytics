@@ -95,47 +95,10 @@ The data also must follow a ROCCC approach:
 
 **We use PostgreSQL**
 
-Examine the data, check for NA, and remove duplicates for three main tables: daily_activity, sleep_day and weight:
-```
-dim(sleep_day)
-sum(is.na(sleep_day))
-sum(duplicated(sleep_day))
-sleep_day <- sleep_day[!duplicated(sleep_day), ]
-```
+Our next step is making sure the data is stored appropriately and prepared for analysis. After downloading all 12 zip files and unzipping them, I housed the files in a folder on my desktop. I also created subfolders for the .CSV filesso that I have a copy of the original data. Then, I launched import it to pgAdmin 4 (Postgre SQL GUI).
+For each .CSV file, I did the following:
 
-Convert ActivityDate into date format and add a column for day of the week:
-```
-daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(ActivityDate, "%m/%d/%Y")))
-```
-
-Check to see if we have 30 users using ```n_distinct()```. The dataset has 33 user data from daily activity, 24 from sleep and only 8 from weight. If there is a discrepency such as in the weight table, check to see how the data are recorded. The way the user record the data may give you insight on why there is missing data. 
-```
-weight %>% 
-  filter(IsManualReport == "True") %>% 
-  group_by(Id) %>% 
-  summarise("Manual Weight Report"=n()) %>%
-  distinct()
- ```
- 
-Additional insight to be awared of is how often user record their data. We can see from the ```ggplot()``` bar graph that the data are greatest from Tuesday to Thursday. We need to investigate the data recording distribution. Monday and Friday are both weekdays, why isn't the data recordings as much as the other weekdays? 
-```
-merged_data$Weekday <- factor(merged_data$Weekday, 
-                              levels = c("Monday", "Tuesday", "Wednesday", "Thursday", 
-                                         "Friday", "Saturday", "Sunday"))
-ggplot(data=merged_data, aes(x=Weekday))+
-  geom_bar(fill="steelblue")
-```
-![Image](https://github.com/AldrianSL/Bellabeat-Fitness-Case-Study_Google-Data-Analytics/blob/main/Screenshot%202024-12-31%20154224.png)
-
-⛔ From weekday's total asleep minutes, we can see the graph look almost **same** as the graph above! We can confirmed that most sleep data is also recorded during Tuesday to Thursday. This raised a question "how comprehensive are the data to form an accurate analysis?"
-
-![image](https://user-images.githubusercontent.com/62857660/136279328-61059fcf-1554-478a-9dd6-680d243df486.png)
-
-Merge the three tables:
-```
-merged_activity_sleep <- merge(daily_activity, sleep_day, by = c("Id"), all=TRUE)
-merged_data <- merge(merged_activity_sleep, weight, by = c("Id"), all=TRUE)
-```
+● Changed format of started_at and ended_at columns
 
 Clean the data to prepare for analysis in 4. Analyze!
 
