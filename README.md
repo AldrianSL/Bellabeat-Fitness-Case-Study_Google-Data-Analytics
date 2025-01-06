@@ -98,7 +98,7 @@ It is structured data, organized in rows (records) and columns (fields). Each re
 * end_lat               #Trip end longitute   
 * member_casual         #Rider type - Member or Casual  
 ```
-Bike station data that is made publicly available by the city of Chicago ([city of Chicago]([https://divvy-tripdata.s3.amazonaws.com/index.html](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html))) will also be used. It can be downloaded here. In terms of bias and credibility, both data sources we are using ROCCC:
+Bike station data that is made publicly available by the (([city of Chicago](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html))) will also be used. It can be downloaded here. In terms of bias and credibility, both data sources we are using ROCCC:
 
 - Reliability and Original: This data comes from real-time data from Cyclistic for the entire time of 2023 published by Motivate International Inc, this is the public data that contains accurate, complete and unbiased info on Cyclistic’s historical bike trips. It can be used to explore how different customer types are using Cyclistic bikes.
 - Comprehensive and Current: these sources contain all the data needed to understand the different ways members and casual riders use Cyclistic bikes. The data is from the past years. It is current and relevant to the task at hand. This is important because the usefulness of data decreases as time passes.
