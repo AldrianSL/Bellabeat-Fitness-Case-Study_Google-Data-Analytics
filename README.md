@@ -142,7 +142,81 @@ UNION ALL
 SELECT * FROM december_2023;
 ```
 
-● Changed format of started_at and ended_at columns
+● Changed format of started_at and ended_at columns:
+```
+ALTER TABLE cyclistic_schema.data_2023
+ALTER COLUMN started_at TYPE timestamp without time zone USING started_at::timestamp without time zone;
+
+ALTER TABLE cyclistic_schema.data_2023
+ALTER COLUMN ended_at TYPE timestamp without time zone USING ended_at::timestamp without time zone;
+```
+
+● Created a column called ride_length:
+```
+ALTER TABLE cyclistic_schema.data_2023
+ADD COLUMN ride_length INTERVAL;
+
+UPDATE cyclistic_schema.data_2023
+SET ride_length = ended_at - started_at;
+```
+
+● Created a column called ride_date:
+```
+ALTER TABLE cyclistic_schema.data_2023
+ADD COLUMN ride_date DATE;
+
+UPDATE cyclistic_schema.data_2023
+SET ride_date = DATE(started_at);
+```
+
+● Created a column called ride_month
+```
+ALTER TABLE cyclistic_schema.data_2023
+ADD COLUMN ride_month INTEGER;
+
+UPDATE cyclistic_schema.data_2023
+SET ride_month = EXTRACT(MONTH FROM started_at);
+```
+
+● Created a column called ride_year
+```
+ALTER TABLE cyclistic_schema.data_2023
+ADD COLUMN ride_year INTEGER;
+
+UPDATE cyclistic_schema.data_2023
+SET ride_year = EXTRACT(YEAR FROM started_at);
+```
+
+● Created a column called start_time
+```
+ALTER TABLE cyclistic_schema.data_2023
+ADD COLUMN start_time TIME;
+
+UPDATE cyclistic_schema.data_2023
+SET start_time = CAST(started_at AS TIME);
+```
+
+● Created a column called end_time
+```
+ALTER TABLE cyclistic_schema.data_2023
+ADD COLUMN end_time TIME;
+
+UPDATE cyclistic_schema.data_2023
+SET end_time = CAST(ended_at AS TIME);
+```
+
+● Created a column called day_of_week
+```
+ALTER TABLE cyclistic_schema.data_2023
+ADD COLUMN day_of_week INTEGER;
+
+UPDATE cyclistic_schema.data_2023
+SET day_of_week = CASE 
+    WHEN started_at IS NULL THEN NULL
+    ELSE EXTRACT(DOW FROM started_at) + 1
+END
+WHERE started_at IS NOT NULL;
+```
 
 Clean the data to prepare for analysis in 4. Analyze!
 
