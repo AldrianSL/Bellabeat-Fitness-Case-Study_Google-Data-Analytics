@@ -224,11 +224,14 @@ Clean the data to prepare for analysis in 4. Analyze!
 ## 4. Analyze
 [Back to Top](#author-aldrian-syafril-lubis)
 
--  [Create quarterly tables](#Create-quarterly-tables)
+-  [Further Data Cleaning and Manipulation via PostgreSQL](#Further-Data-Cleaning-and-Manipulation-via-PostgreSQL)
 -  [Noticebal Day](#noticeable-day)
 -  [Total Steps](#total-steps)
 -  [Interesting Finds](#interesting-finds)
 -  [Sleep](#sleep)
+
+###**Further Data Cleaning and Manipulation via PostgreSQL**
+[Back to Analyze](#4-analyze)
 
 Before we go any further, I found some interesting insights when I categorized the existing data into Quarter forms using this syntax:
 ```
@@ -248,7 +251,6 @@ GROUP BY
 
 
 ### **Create quarterly tables**
-[Back to Analyze](#4-analyze)
 
 In order to perform analysis by season, let’s seperate the merged tables into these tables :
 * **Table 1)** 2023_Q1 -> JAN(01), FEB(02), MAR(03)
@@ -281,7 +283,30 @@ FROM cyclistic_schema.data_2023
 WHERE EXTRACT(QUARTER FROM started_at) = 4;
 ```
 
-Percentage of active minutes in the four categories: very active, fairly active, lightly active and sedentary. From the pie chart, we can see that most users spent 81.3% of their daily activity in sedentary minutes and only 1.74% in very active minutes. 
+###**Clean and transform day of week**
+Some additional data cleaning is needed on the new table. First, we’ll update the format for day_of_week from INTEGER to STRING. Then, we’ll change the values from numbers to their corresponding day names (i.e. 1 = Sunday, 7 = Saturday.
+
+We’ll start with Q1_2023 and repeat for the remaining three tables:
+
+```
+ALTER TABLE cyclistic_schema.Q1_2023
+ALTER COLUMN day_of_week TYPE TEXT;
+
+UPDATE cyclistic_schema.Q1_2023
+SET day_of_week = CASE 
+    WHEN day_of_week = '1' THEN 'Sunday'
+    WHEN day_of_week = '2' THEN 'Monday'
+    WHEN day_of_week = '3' THEN 'Tuesday'
+    WHEN day_of_week = '4' THEN 'Wednesday'
+    WHEN day_of_week = '5' THEN 'Thursday'
+    WHEN day_of_week = '6' THEN 'Friday'
+    WHEN day_of_week = '7' THEN 'Saturday'
+    ELSE day_of_week 
+END;
+```
+
+###**Further Data Cleaning and Manipulation via PostgreSQL**
+[Back to Analyze](#4-analyze)
 ```
 percentage <- data.frame(
   level=c("Sedentary", "Lightly", "Fairly", "Very Active"),
