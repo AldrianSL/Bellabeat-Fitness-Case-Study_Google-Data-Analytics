@@ -216,6 +216,7 @@ SET day_of_week = CASE
     ELSE EXTRACT(DOW FROM started_at) + 1
 END
 WHERE started_at IS NOT NULL;
+--- Note: 1 = Sunday and 7 = Saturday
 ```
 
 Clean the data to prepare for analysis in 4. Analyze!
