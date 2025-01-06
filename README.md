@@ -82,7 +82,23 @@ There are 12 .CSV files total:
 11) 2023-11_divvy_trip-data.csv  
 12) 2023-12_divvy_trip-data.csv  
 ```
-The data also must follow a ROCCC approach:
+It is structured data, organized in rows (records) and columns (fields). Each record represents one trip, and each trip has a unique field that identifies it: ride_id. Each trip is anonymized and includes the following fields:
+```
+* ride_id               #Ride id - unique
+* rideable_type         #Bike type - Classic, Docked, Electric
+* started_at            #Trip start day and time
+* ended_at              #Trip end day and time
+* start_station_name    #Trip start station
+* start_station_id      #Trip start station id
+* end_station_name      #Trip end station
+* end_station_id        #Trip end station id
+* start_lat             #Trip start latitude  
+* start_lng             #Trip start longitute   
+* end_lat               #Trip end latitude  
+* end_lat               #Trip end longitute   
+* member_casual         #Rider type - Member or Casual  
+```
+Bike station data that is made publicly available by the city of Chicago ([city of Chicago]([https://divvy-tripdata.s3.amazonaws.com/index.html](https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html))) will also be used. It can be downloaded here. In terms of bias and credibility, both data sources we are using ROCCC:
 
 - Reliability and Original: This data comes from real-time data from Cyclistic for the entire time of 2023 published by Motivate International Inc, this is the public data that contains accurate, complete and unbiased info on Cyclistic’s historical bike trips. It can be used to explore how different customer types are using Cyclistic bikes.
 - Comprehensive and Current: these sources contain all the data needed to understand the different ways members and casual riders use Cyclistic bikes. The data is from the past years. It is current and relevant to the task at hand. This is important because the usefulness of data decreases as time passes.
@@ -97,6 +113,8 @@ The data also must follow a ROCCC approach:
 
 Our next step is making sure the data is stored appropriately and prepared for analysis. After downloading all 12 zip files and unzipping them, I housed the files in a folder on my desktop. I also created subfolders for the .CSV filesso that I have a copy of the original data. Then, I launched import it to pgAdmin 4 (Postgre SQL GUI).
 For each .CSV file, I did the following:
+
+● Changed format of started_at and ended_at columns
 
 ● Changed format of started_at and ended_at columns
 
