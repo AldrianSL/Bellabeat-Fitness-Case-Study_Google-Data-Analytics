@@ -309,9 +309,8 @@ END;
 ```
 
 
-###**Analysis #1: Exploratory**
+### **Analysis #1: Exploratory**
 [Back to Analyze](#4-analyze)
-
 
 ```
 percentage <- data.frame(
