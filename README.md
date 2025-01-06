@@ -114,7 +114,33 @@ Bike station data that is made publicly available by the ([city of Chicago](http
 Our next step is making sure the data is stored appropriately and prepared for analysis. After downloading all 12 zip files and unzipping them, I housed the files in a folder on my desktop. I also created subfolders for the .CSV filesso that I have a copy of the original data. Then, I launched import it to pgAdmin 4 (Postgre SQL GUI).
 For each .CSV file, I did the following:
 
-● Changed format of started_at and ended_at columns
+● Merge all dataframes into a single dataframe :
+```
+CREATE TABLE cyclistic_schema.data_2023 AS
+SELECT * FROM january_2023
+UNION ALL
+SELECT * FROM february_2023
+UNION ALL
+SELECT * FROM march_2023
+UNION ALL
+SELECT * FROM april_2023
+UNION ALL
+SELECT * FROM may_2023
+UNION ALL
+SELECT * FROM june_2023
+UNION ALL
+SELECT * FROM july_2023
+UNION ALL
+SELECT * FROM august_2023
+UNION ALL
+SELECT * FROM september_2023
+UNION ALL
+SELECT * FROM october_2023
+UNION ALL
+SELECT * FROM november_2023
+UNION ALL
+SELECT * FROM december_2023;
+```
 
 ● Changed format of started_at and ended_at columns
 
