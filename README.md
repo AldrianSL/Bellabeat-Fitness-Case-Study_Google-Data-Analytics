@@ -285,7 +285,7 @@ WHERE EXTRACT(QUARTER FROM started_at) = 4;
 ```
 
 
-###**Clean and transform day of week**
+### **Clean and transform day of week**
 
 Some additional data cleaning is needed on the new table. First, we’ll update the format for day_of_week from INTEGER to STRING. Then, we’ll change the values from numbers to their corresponding day names (i.e. 1 = Sunday, 7 = Saturday.
 
