@@ -224,8 +224,7 @@ Clean the data to prepare for analysis in 4. Analyze!
 ## 4. Analyze
 [Back to Top](#author-aldrian-syafril-lubis)
 
--  [Summary](#summary)
--  [Active Minutes](#active-minutes)
+-  [Create quarterly tables](#Create-quarterly-tables)
 -  [Noticebal Day](#noticeable-day)
 -  [Total Steps](#total-steps)
 -  [Interesting Finds](#interesting-finds)
@@ -247,6 +246,8 @@ GROUP BY
 
 ### **Key Insight : I found that there was a large spike in cyclistic service usage in the middle of winter, in July and August, and in early aumn in September.**
 
+### Active Minutes:
+[Back to Analyze](#4-analyze)
 #### **Create quarterly tables**
 In order to perform analysis by season, let’s seperate the merged tables into these tables :
 ● Table 1) 2023_Q1 -> JAN(01),FEB(02), MAR(03)
@@ -278,9 +279,6 @@ SELECT *
 FROM cyclistic_schema.data_2023
 WHERE EXTRACT(QUARTER FROM started_at) = 4;
 ```
-
-### Active Minutes:
-[Back to Analyze](#4-analyze)
 
 Percentage of active minutes in the four categories: very active, fairly active, lightly active and sedentary. From the pie chart, we can see that most users spent 81.3% of their daily activity in sedentary minutes and only 1.74% in very active minutes. 
 ```
