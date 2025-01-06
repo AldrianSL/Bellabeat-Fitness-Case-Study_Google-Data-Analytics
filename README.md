@@ -242,7 +242,7 @@ GROUP BY
     quarter;
 ```
 
-###**Key Insight : I found that there was a large spike in cyclistic service usage in the middle of winter, in July and August, and in early aumn in September.**###
+### **Key Insight : I found that there was a large spike in cyclistic service usage in the middle of winter, in July and August, and in early aumn in September.**
 
 ### Active Minutes:
 [Back to Analyze](#4-analyze)
