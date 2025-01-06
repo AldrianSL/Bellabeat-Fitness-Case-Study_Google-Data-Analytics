@@ -241,7 +241,9 @@ FROM
 GROUP BY
     quarter;
 ```
-
+<p align="center">
+  <img src="Total Trips by Quarter.png" alt="Image" />
+</p>
 ### **Key Insight : I found that there was a large spike in cyclistic service usage in the middle of winter, in July and August, and in early aumn in September.**
 
 ### Active Minutes:
