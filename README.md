@@ -230,6 +230,7 @@ Clean the data to prepare for analysis in 4. Analyze!
 -  [Interesting Finds](#interesting-finds)
 -  [Sleep](#sleep)
 
+
 ###**Further Data Cleaning and Manipulation via PostgreSQL**
 [Back to Analyze](#4-analyze)
 
@@ -283,6 +284,7 @@ FROM cyclistic_schema.data_2023
 WHERE EXTRACT(QUARTER FROM started_at) = 4;
 ```
 
+
 ###**Clean and transform day of week**
 
 Some additional data cleaning is needed on the new table. First, we’ll update the format for day_of_week from INTEGER to STRING. Then, we’ll change the values from numbers to their corresponding day names (i.e. 1 = Sunday, 7 = Saturday.
@@ -305,6 +307,7 @@ SET day_of_week = CASE
     ELSE day_of_week 
 END;
 ```
+
 
 ###**Analysis #1: Exploratory**
 [Back to Analyze](#4-analyze)
