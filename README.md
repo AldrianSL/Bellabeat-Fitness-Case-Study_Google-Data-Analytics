@@ -246,9 +246,9 @@ GROUP BY
 
 ### **Key Insight : I found that there was a large spike in cyclistic service usage in the middle of winter, in July and August, and in early aumn in September.**
 
-### Active Minutes:
+
+### **Create quarterly tables**
 [Back to Analyze](#4-analyze)
-#### **Create quarterly tables**
 In order to perform analysis by season, let’s seperate the merged tables into these tables :
 ● Table 1) 2023_Q1 -> JAN(01),FEB(02), MAR(03)
 ● Table 2) 2023_Q2 -> APR(04), MAY(05), JUN(06)
