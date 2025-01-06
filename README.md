@@ -251,10 +251,10 @@ GROUP BY
 [Back to Analyze](#4-analyze)
 
 In order to perform analysis by season, let’s seperate the merged tables into these tables :
-● Table 1) 2023_Q1 -> JAN(01),FEB(02), MAR(03)
-● Table 2) 2023_Q2 -> APR(04), MAY(05), JUN(06)
-● Table 3) 2023_Q3 -> JUL(07), AUG(08), SEP(09)
-● Table 4) 2023_Q4 -> OCT(10), NOV(11), DEC(12))
+* **Table 1)** 2023_Q1 -> JAN(01), FEB(02), MAR(03)
+* **Table 2)** 2023_Q2 -> APR(04), MAY(05), JUN(06)
+* **Table 3)** 2023_Q3 -> JUL(07), AUG(08), SEP(09)
+* **Table 4)** 2023_Q4 -> OCT(10), NOV(11), DEC(12)
 ```
 -- Create 2023_Q1 table
 CREATE TABLE cyclistic_schema.Q1_2023 AS
