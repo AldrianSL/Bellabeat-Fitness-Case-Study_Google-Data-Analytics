@@ -225,7 +225,7 @@ Clean the data to prepare for analysis in 4. Analyze!
 [Back to Top](#author-aldrian-syafril-lubis)
 
 -  [Further Data Cleaning and Manipulation via PostgreSQL](#Further-Data-Cleaning-and-Manipulation-via-PostgreSQL)
--  [Analysis No.1: Exploratory](#Analysis-No.1:-Exploratory)
+-  [Analysis #1: Exploratory](#Analysis-#1:Exploratory)
 -  [Total Steps](#total-steps)
 -  [Interesting Finds](#interesting-finds)
 -  [Sleep](#sleep)
@@ -309,7 +309,7 @@ END;
 ```
 
 
-### **Analysis No.1: Exploratory**
+### **Analysis #1: Exploratory**
 [Back to Analyze](#4-analyze)
 
 ```
