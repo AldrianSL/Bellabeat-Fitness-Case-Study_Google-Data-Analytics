@@ -231,27 +231,18 @@ Clean the data to prepare for analysis in 4. Analyze!
 -  [Interesting Finds](#interesting-finds)
 -  [Sleep](#sleep)
 
+Before we go any further, I found some interesting insights when I categorized the existing data into Quarter forms using this syntax:
+```
+SELECT
+    EXTRACT(QUARTER FROM started_at) AS quarter,
+    COUNT(*) AS total_trips
+FROM
+    cyclistic_schema.data_2023
+GROUP BY
+    quarter;
+```
 
-### Summary:
-Check min, max, mean, median and any outliers. Avg weight is 135 pounds with BMI of 24 and burn 2050 calories. Avg steps is 10200, max is almost triple that 36000 steps. Users spend on avg 12 hours a day in sedentary minutes, 4 hours lightly active, only half hour in fairly+very active! Users also gets about 7 hour of sleep. 
-```
-merged_data %>%
-  dplyr::select(Weekday,
-         TotalSteps,
-         TotalDistance,
-         VeryActiveMinutes,
-         FairlyActiveMinutes,
-         LightlyActiveMinutes,
-         SedentaryMinutes,
-         Calories,
-         TotalMinutesAsleep,
-         TotalTimeInBed,
-         WeightPounds,
-         BMI
-         ) %>%
-  summary()
-```
-![summary](https://user-images.githubusercontent.com/62857660/136262678-18377ce4-3443-48a4-b108-eba6a273f963.PNG)
+###**Key Insight : I found that there was a large spike in cyclistic service usage in the middle of winter, in July and August, and in early aumn in September.**###
 
 ### Active Minutes:
 [Back to Analyze](#4-analyze)
