@@ -547,8 +547,18 @@ Wow! There is three start station that cracks the top ten for both lists.
 * (([Elis Ave & 60th St](https://www.bing.com/maps?q=Ellis+Ave+%26+60th+St&FORM=HDRSC6&cp=43.601715%7E-96.775309&lvl=16.2))) start station is ranked #2 for annual members and #6 for casual riders.
 * (([Kingsbury St & Kinzie St](https://www.bing.com/maps?q=Kingsbury+St+%26+Kinzie+St&FORM=HDRSC6&cp=41.889138%7E-87.638685&lvl=16.3))) start station is ranked #4 for annual members and #8 for casual riders.
 
+### Quarterly data exploration (cont.)
+Instead of walking through each quarter like we’ve done for Q1-2023, I will instead provide links to the full SQL files. The queries used are similar to the ones above:
+* **Table 1)** 2023_Q1 -> JAN(01), FEB(02), MAR(03)
+* **Table 2)** 2023_Q2 -> APR(04), MAY(05), JUN(06)
+* **Table 3)** 2023_Q3 -> JUL(07), AUG(08), SEP(09)
+* **Table 4)** 2023_Q4 -> OCT(10), NOV(11), DEC(12)
+
+
 ## **Summary**
 [Back to Analyze](#4-analyze)
+
+
 
 ## 5. Share 
 [Back to Top](#author-emi-ly)
