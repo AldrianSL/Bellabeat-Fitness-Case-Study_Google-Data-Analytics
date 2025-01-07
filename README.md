@@ -547,7 +547,7 @@ Wow! There is three start station that cracks the top ten for both lists.
 * **Table 2)** 2023_Q2 -> APR(04), MAY(05), JUN(06)
 * **Table 3)** 2023_Q3 -> JUL(07), AUG(08), SEP(09)
 * **Table 4)** 2023_Q4 -> OCT(10), NOV(11), DEC(12)
-(([University Ave & 57th St](https://www.bing.com/maps?q=University+Ave+%26+57th+St&FORM=HDRSC6&cp=47.204091%7E-122.513229&lvl=18.4)) start station is ranked #1 for annual members and #5 for casual riders, Elis Ave. The casual riders seem to favor stations near the water like Lake Shore Dr & Monroe St and Streeter Dr & Grand Ave, while annual members frequent start stations in the River North neighborhood like Dearborn St & Erie St and Kingsbury St & Kinzie St.
+([University Ave & 57th St](https://www.bing.com/maps?q=University+Ave+%26+57th+St&FORM=HDRSC6&cp=47.204091%7E-122.513229&lvl=18.4) start station is ranked #1 for annual members and #5 for casual riders, Elis Ave. The casual riders seem to favor stations near the water like Lake Shore Dr & Monroe St and Streeter Dr & Grand Ave, while annual members frequent start stations in the River North neighborhood like Dearborn St & Erie St and Kingsbury St & Kinzie St.
 
 ## 5. Share 
 [Back to Top](#author-emi-ly)
