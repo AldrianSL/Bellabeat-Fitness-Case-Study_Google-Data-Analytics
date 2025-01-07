@@ -530,7 +530,7 @@ SELECT
             CASE WHEN member_casual = 'casual' AND start_station_name = start_station_name THEN 1 ELSE 0 END
             ) AS casual
 FROM 
-        `cyclistic-cs-341119.biketrips.2021_Q1`
+        cyclistic_schema.Q1_2023
 GROUP BY 
         start_station_name
 ORDER BY 
@@ -539,6 +539,7 @@ ORDER BY
 ![Screenshot 2025-01-07 192014](https://github.com/user-attachments/assets/f9018b27-6bd8-4786-89d1-2ca317ce2ba0)
 
 We can begin to see some interesting patterns in the start station data. It looks like casual riders and annual members tend to favor different regions for beginning their trips. By updating the ORDER BY function to sort by casual DESC and member DESC in two separate queries, we can compare the top ten start stations for both:
+![Start Stations](https://github.com/user-attachments/assets/dddf0c0f-c217-47f2-ad0e-e601bfd39826)
 
 
 ## 5. Share 
