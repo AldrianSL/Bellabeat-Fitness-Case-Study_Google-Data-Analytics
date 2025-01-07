@@ -379,52 +379,50 @@ SELECT
 <div style="text-align: center;">
   <img src="https://github.com/user-attachments/assets/3fad7b6d-35c8-419e-8872-e28666d7fb61" alt="Average Ride Length Q1_2023" />
 </div>
+We can see that casual riders average about 12 more minutes per ride. That seems like a pretty big difference. What influence are outliers having on these averages? Let’s investigate.
 
-
-### Total Steps:
-[Back to Analyze](#4-analyze)
-
-Let's look at how active the users are per hourly in total steps. From 5PM to 7PM the users take the most steps. 
+#### Max ride lengths
+We’ll look at the maximum values for ride_length to see if anything extreme is influencing the casual rider average:
 ```
-ggplot(data=hourly_step, aes(x=Hour, y=StepTotal, fill=Hour))+
-  geom_bar(stat="identity")+
-  labs(title="Hourly Steps")
+SELECT 
+        member_casual,
+        MAX(ride_length) AS ride_length_MAX
+FROM 
+        cyclistic_schema.Q1_2023
+GROUP BY 
+        member_casual
+ORDER BY 
+        ride_length_MAX DESC
+LIMIT 
+        2
 ```
-![image](https://user-images.githubusercontent.com/62857660/136235391-bb22c15d-93aa-494d-bce2-76a984274fb7.png)
+![Screenshot 2025-01-07 165019](https://github.com/user-attachments/assets/c19d4718-9ebb-49ea-9d8a-24bfe16e3b22)
+As we suspected, the casual riders average ride_length was significantly impacted by at least one outlier. The longest trip duration for casual riders was 23 days 8 Hours. Meanwhile, the longest for annual member was only about 1 day 2 hours.
 
-
-How active the users are weekly in total steps. Tuesday and Saturdays the users take the most steps. 
+#### Median ride lengths
 ```
-ggplot(data=merged_data, aes(x=Weekday, y=TotalSteps, fill=Weekday))+ 
-  geom_bar(stat="identity")+
-  ylab("Total Steps")
+SELECT
+    member_casual,
+    median_ride_length
+FROM
+    (
+        SELECT
+            member_casual,
+            PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY ride_length) AS median_ride_length
+        FROM
+            cyclistic_schema.Q1_2023
+        WHERE
+            ride_length IS NOT NULL
+        GROUP BY
+            member_casual
+    ) AS subquery
+ORDER BY
+    median_ride_length DESC
+LIMIT 2;
 ```
-![image](https://user-images.githubusercontent.com/62857660/136252217-53d355de-2c25-4185-8e6d-27ba087573ae.png)
+![Screenshot 2025-01-07 173027](https://github.com/user-attachments/assets/a211b3df-605e-4709-92d8-dd3850d215ec)
+#### Now we see a much closer number, with 8 minutes for casual riders and 7 minutes for annual members.
 
-
-
-
-### Interesting Finds:
-[Back to Analyze](#4-analyze)
-
-The more active that you're, the more steps you take, and the more calories you will burn. This is an obvious fact, but we can still look into the data to find any interesting. Here we see that some users who are sedentary, take minimal steps, but still able to burn over 1500 to 2500 calories compare to users who are more active, take more steps, but still burn similar calories.
-
-```
-ggplot(data=daily_activity, aes(x=TotalSteps, y = Calories, color=SedentaryMinutes))+ 
-  geom_point()+ 
-  stat_smooth(method=lm)+
-  scale_color_gradient(low="steelblue", high="orange")
-
-```
-![image](https://user-images.githubusercontent.com/62857660/136260311-a379b303-76ac-426c-9c30-ea2695569632.png)
-
-Comparing the four active levels to the total steps, we see most data is concentrated on users who take about 5000 to 15000 steps a day. These users spent an average between 8 to 13 hours in sedentary, 5 hours in lightly active, and 1 to 2 hour for fairly and very active. 
-
-![image](https://user-images.githubusercontent.com/62857660/136269396-7019cf93-6e0c-4216-9944-5e58e017f593.png)
-
-According to [this healthline.com article](https://www.healthline.com/nutrition/how-many-calories-per-day#average-calorie-needs), moderately active woman between the ages of 26–50 needs to eat about 2,000 calories per day and moderately active man between the ages of 26–45 needs 2,600 calories per day to maintain his weight. Comparing the four active levels to the calories, we see most data is concentrated on users who burn 2000 to 3000 calories a day. These users also spent an average between 8 to 13 hours in sedentary, 5 hours in lightly active, and 1 to 2 hour for fairly and very active. Additionally, we see that the sedentary line is leveling off toward the end while fairly + very active line is curing back up. This indicate that the users who burn more calories spend less time in sedentary, more time in fairly + active. 
-
-![image](https://user-images.githubusercontent.com/62857660/136263632-ac5c1958-23db-4374-b810-df6f322b047b.png)
 
 ### Sleep:
 [Back to Analyze](#4-analyze)
