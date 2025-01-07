@@ -351,6 +351,34 @@ Of the 639,424 total trips in Q1_2023, 77% were from annual members while 23% we
 
 #### Average ride lengths
 How does average ride_length differ for these groups?
+```
+SELECT
+        (
+        SELECT 
+                AVG(ride_length)
+        FROM 
+                cyclistic_schema.Q1_2023
+        ) AS AvgRideLength_Overall,
+        (
+        SELECT 
+                AVG(ride_length) 
+        FROM 
+                cyclistic_schema.Q1_2023
+        WHERE 
+                member_casual = 'member'
+        ) AS AvgRideLength_Member,
+        (
+        SELECT 
+                AVG(ride_length) 
+        FROM 
+                cyclistic_schema.Q1_2023
+        WHERE 
+                member_casual = 'casual'
+        ) AS AvgRideLength_Casual
+```
+<p align="center">
+  <img src="![Average Ride Length Q1_2023](https://github.com/user-attachments/assets/d1201df0-b9e9-465d-9937-2c2321803078)" alt="Image" />
+</p>
 
 
 ### Total Steps:
