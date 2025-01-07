@@ -231,7 +231,7 @@ Clean the data to prepare for analysis in 4. Analyze!
 -  [Sleep](#sleep)
 
 
-### **Further Data Cleaning and Manipulation via PostgreSQL**
+## **Further Data Cleaning and Manipulation via PostgreSQL**
 [Back to Analyze](#4-analyze)
 
 Before we go any further, I found some interesting insights when I categorized the existing data into Quarter forms using this syntax:
@@ -309,7 +309,7 @@ END;
 ```
 
 
-### :question: **Exploratory**
+## **Exploratory**
 [Back to Analyze](#4-analyze)
 
 ```
