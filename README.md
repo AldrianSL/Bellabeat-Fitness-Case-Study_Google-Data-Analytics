@@ -397,6 +397,7 @@ LIMIT
         2
 ```
 ![Screenshot 2025-01-07 165019](https://github.com/user-attachments/assets/c19d4718-9ebb-49ea-9d8a-24bfe16e3b22)
+
 As we suspected, the casual riders average ride_length was significantly impacted by at least one outlier. The longest trip duration for casual riders was 23 days 8 Hours. Meanwhile, the longest for annual member was only about 1 day 2 hours.
 
 #### Median ride lengths
