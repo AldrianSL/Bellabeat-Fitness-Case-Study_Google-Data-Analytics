@@ -447,8 +447,52 @@ WHERE
 ORDER BY
         member_casual DESC LIMIT 2
 ```
+![Screenshot 2025-01-07 183732](https://github.com/user-attachments/assets/d99a83ca-96c8-4fad-a891-c87269cdd354)
+
 Suprisingly, Tuesday is the most popular day for annual members, meanwhile Sunday is the most popular for casual riders which is predictable.
 
+### Median ride length per day
+Let’s look at the median ride lengths per day for both annual members and casual riders. Since Tuesday and Sunday is the most popular overall, do we think it will also have the highest median ride length?
+```
+-- Looking at median ride lengths per day for annual members  
+
+SELECT
+    member_casual,
+    day_of_week,
+    PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY ride_length) AS median_ride_length
+FROM
+    cyclistic_schema.Q1_2023
+WHERE
+    member_casual = 'member'
+    AND ride_length IS NOT NULL 
+GROUP BY
+    member_casual, day_of_week
+ORDER BY
+    median_ride_length DESC
+LIMIT 7;
+
+ -- Looking at median ride lengths per day for casual riders  
+ 
+SELECT
+    member_casual,
+    day_of_week,
+    PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY ride_length) AS median_ride_length
+FROM
+    cyclistic_schema.Q1_2023
+WHERE
+    member_casual = 'casual'
+    AND ride_length IS NOT NULL 
+GROUP BY
+    member_casual, day_of_week
+ORDER BY
+    median_ride_length DESC
+LIMIT 7;
+```
+Annual Member Rider Median ride length per day :
+![Screenshot 2025-01-07 184700](https://github.com/user-attachments/assets/98dcec2f-5516-40c2-82a6-5c494b5fc836)
+
+Casual Rider Median ride length per day :
+![Screenshot 2025-01-07 184722](https://github.com/user-attachments/assets/0344da77-4706-4fe6-9f2c-f95d7f2a775e)
 
 
 ## 5. Share 
