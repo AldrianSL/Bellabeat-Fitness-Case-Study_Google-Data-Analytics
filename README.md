@@ -554,10 +554,16 @@ Instead of walking through each quarter like we’ve done for Q1-2023, I will in
 * [Q3_2023_Documentation.sql](https://github.com/AldrianSL/Cyclistic-Bikeshare_Google-Data-Analytics/blob/main/Q3_2023_Documentation.sql)
 * [Q4_2023_Documentation.sql](https://github.com/AldrianSL/Cyclistic-Bikeshare_Google-Data-Analytics/blob/main/Q4_2023_Documentation.sql)
 
+I’ll included some high-level quarterly analysis notes in the next section.
 
 ## **Summary**
 [Back to Analyze](#4-analyze)
 
+### Full Year - Trends, Relationships and Insights
+In order to analyze all twelve months together, we’ll combine the four quarterly tables into one table. The queries used to accomplish this are included here for reference. I’ve also provided the SQL file used for full year analysis: analysis_full_year.sql.
+
+For a summary and overall visualization of my full year analysis, please visit the Tableau Public dashboard I created here: Tableau Dashboard: Cyclistic Bikeshare in Chicago.
+I will also highlight some of the interesting trends and relationships I discovered bel
 
 
 ## 5. Share 
