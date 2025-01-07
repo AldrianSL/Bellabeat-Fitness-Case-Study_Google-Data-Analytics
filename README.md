@@ -549,8 +549,7 @@ Wow! There is three start station that cracks the top ten for both lists.
 
 ### Quarterly data exploration (cont.)
 Instead of walking through each quarter like we’ve done for Q1-2023, I will instead provide links to the full SQL files. The queries used are similar to the ones above:
-* [Uploading Q1_2023_Documentation.sql…]()
-
+* Q1_2023_Documentation.sql
 * 
 * 
 * 
