@@ -309,7 +309,7 @@ END;
 ```
 
 
-### **Exploratory**
+### :question: **Exploratory**
 [Back to Analyze](#4-analyze)
 
 ```
