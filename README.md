@@ -376,7 +376,7 @@ SELECT
                 member_casual = 'casual'
         ) AS AvgRideLength_Casual
 ```
-![Average Ride Length Q1_2023](https://github.com/user-attachments/assets/3fad7b6d-35c8-419e-8872-e28666d7fb61)
+<img src="https://github.com/user-attachments/assets/3fad7b6d-35c8-419e-8872-e28666d7fb61" alt="Average Ride Length Q1_2023" style="display: block; margin-left: auto; margin-right: auto;" />
 
 
 ### Total Steps:
