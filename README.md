@@ -332,7 +332,7 @@ ORDER BY
 ```
 The above query returned 639,424 rows. That is the number of recorded trips we have data for in this quarter. Let’s dive deeper into those trip totals.
 
-#### Total Trips
+### Total Trips
 We’ll create total columns for overall, annual members and casual riders. We’ll also calculate percentages of overall total for both types:
 ```
 SELECT
@@ -349,7 +349,7 @@ Of the 639,424 total trips in Q1_2023, 77% were from annual members while 23% we
   <img src="Total Trips Q1_2023.png" alt="Image" />
 </p>
 
-#### Average ride lengths
+### Average ride lengths
 How does average ride_length differ for these groups?
 ```
 SELECT
@@ -381,7 +381,7 @@ SELECT
 </div>
 We can see that casual riders average about 12 more minutes per ride. That seems like a pretty big difference. What influence are outliers having on these averages? Let’s investigate.
 
-#### Max ride lengths
+### Max ride lengths
 We’ll look at the maximum values for ride_length to see if anything extreme is influencing the casual rider average:
 ```
 SELECT 
@@ -400,7 +400,7 @@ LIMIT
 
 As we suspected, the casual riders average ride_length was significantly impacted by at least one outlier. The longest trip duration for casual riders was 23 days 8 Hours. Meanwhile, the longest for annual member was only about 1 day 2 hours.
 
-#### Median ride lengths
+### Median ride lengths
 ```
 SELECT
     member_casual,
@@ -424,6 +424,7 @@ LIMIT 2;
 ![Screenshot 2025-01-07 173027](https://github.com/user-attachments/assets/a211b3df-605e-4709-92d8-dd3850d215ec)
 #### Now we see a much closer number, with 8 minutes for casual riders and 7 minutes for annual members.
 
+### Busiest day for rides
 
 ### Sleep:
 [Back to Analyze](#4-analyze)
