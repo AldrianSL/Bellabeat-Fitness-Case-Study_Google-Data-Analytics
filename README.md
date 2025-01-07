@@ -539,8 +539,11 @@ ORDER BY
 ![Screenshot 2025-01-07 192014](https://github.com/user-attachments/assets/f9018b27-6bd8-4786-89d1-2ca317ce2ba0)
 
 We can begin to see some interesting patterns in the start station data. It looks like casual riders and annual members tend to favor different regions for beginning their trips. By updating the ORDER BY function to sort by casual DESC and member DESC in two separate queries, we can compare the top ten start stations for both:
+
 ![Start Stations](https://github.com/user-attachments/assets/dddf0c0f-c217-47f2-ad0e-e601bfd39826)
 
+Wow! There is three start station that cracks the top ten for both lists.
+(([University Ave & 57th St](https://www.bing.com/maps?q=University+Ave+%26+57th+St&FORM=HDRSC6&cp=47.204091%7E-122.513229&lvl=18.4))   start station is ranked #1 for annual members and #10 for casual riders. The casual riders seem to favor stations near the water like Lake Shore Dr & Monroe St and Streeter Dr & Grand Ave, while annual members frequent start stations in the River North neighborhood like Dearborn St & Erie St and Kingsbury St & Kinzie St.
 
 ## 5. Share 
 [Back to Top](#author-emi-ly)
