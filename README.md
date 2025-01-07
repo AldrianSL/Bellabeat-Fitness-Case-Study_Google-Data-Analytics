@@ -344,6 +344,11 @@ SELECT
 FROM
     cyclistic_schema.Q1_2023;
 ```
+<p align="center">
+  <img src="Total Trips Q1_2023.png" alt="Image" />
+</p>
+
+
 ### Noticeable Day:
 [Back to Analyze](#4-analyze)
 
