@@ -226,7 +226,7 @@ Clean the data to prepare for analysis in 4. Analyze!
 
 -  [Further Data Cleaning and Manipulation via PostgreSQL](#Further-Data-Cleaning-and-Manipulation-via-PostgreSQL)
 -  [Exploratory](#Exploratory)
--  [Total Steps](#total-steps)
+-  [Summary](#Summary)
 -  [Interesting Finds](#interesting-finds)
 -  [Sleep](#sleep)
 
@@ -547,7 +547,8 @@ Wow! There is three start station that cracks the top ten for both lists.
 * (([Elis Ave & 60th St](https://www.bing.com/maps?q=Ellis+Ave+%26+60th+St&FORM=HDRSC6&cp=43.601715%7E-96.775309&lvl=16.2))) start station is ranked #2 for annual members and #6 for casual riders.
 * (([Kingsbury St & Kinzie St](https://www.bing.com/maps?q=Kingsbury+St+%26+Kinzie+St&FORM=HDRSC6&cp=41.889138%7E-87.638685&lvl=16.3))) start station is ranked #4 for annual members and #8 for casual riders.
 
-Elis Ave. The casual riders seem to favor stations near the water like Lake Shore Dr & Monroe St and Streeter Dr & Grand Ave, while annual members frequent start stations in the River North neighborhood like Dearborn St & Erie St and Kingsbury St & Kinzie St.
+## **Summary**
+[Back to Analyze](#4-analyze)
 
 ## 5. Share 
 [Back to Top](#author-emi-ly)
