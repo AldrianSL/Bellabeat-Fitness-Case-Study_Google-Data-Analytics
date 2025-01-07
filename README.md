@@ -377,7 +377,7 @@ SELECT
         ) AS AvgRideLength_Casual
 ```
 <p align="center">
-  <img src="![Average Ride Length Q1_2023](https://github.com/user-attachments/assets/d1201df0-b9e9-465d-9937-2c2321803078)" alt="Image" />
+![Average Ride Length Q1_2023](https://github.com/user-attachments/assets/d1201df0-b9e9-465d-9937-2c2321803078)" alt="Image
 </p>
 
 
