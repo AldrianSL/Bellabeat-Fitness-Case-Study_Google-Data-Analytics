@@ -537,6 +537,7 @@ ORDER BY
         total DESC
 ```
 ![Screenshot 2025-01-07 192014](https://github.com/user-attachments/assets/f9018b27-6bd8-4786-89d1-2ca317ce2ba0)
+
 We can begin to see some interesting patterns in the start station data. It looks like casual riders and annual members tend to favor different regions for beginning their trips. By updating the ORDER BY function to sort by casual DESC and member DESC in two separate queries, we can compare the top ten start stations for both:
 
 
