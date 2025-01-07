@@ -344,6 +344,7 @@ SELECT
 FROM
     cyclistic_schema.Q1_2023;
 ```
+Of the 278,118 total trips in Q1_2023, 77% were from annual members while 23% were from casual riders.
 <p align="center">
   <img src="Total Trips Q1_2023.png" alt="Image" />
 </p>
