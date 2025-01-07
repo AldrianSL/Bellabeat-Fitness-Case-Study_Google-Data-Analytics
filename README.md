@@ -344,22 +344,13 @@ SELECT
 FROM
     cyclistic_schema.Q1_2023;
 ```
-Of the 278,118 total trips in Q1_2023, 77% were from annual members while 23% were from casual riders.
+Of the 639,424 total trips in Q1_2023, 77% were from annual members while 23% were from casual riders.
 <p align="center">
   <img src="Total Trips Q1_2023.png" alt="Image" />
 </p>
 
-
-### Noticeable Day:
-[Back to Analyze](#4-analyze)
-
-The bar graph shows that there is a jump on Saturday: user spent LESS time in sedentary minutes and take MORE steps. Users are out and about on Saturday. 
-
-![image](https://user-images.githubusercontent.com/62857660/136281021-fea4e732-982c-4404-8650-c3e943076856.png)
-![image](https://user-images.githubusercontent.com/62857660/136281035-2b190f9e-a5a5-44c2-8183-20b1f7441e8d.png)
-
-
-
+#### Average ride lengths
+How does average ride_length differ for these groups?
 
 
 ### Total Steps:
