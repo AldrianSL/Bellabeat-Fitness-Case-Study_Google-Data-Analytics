@@ -312,31 +312,38 @@ END;
 ## **Exploratory**
 [Back to Analyze](#4-analyze)
 
+### Q1_2023 - Quarterly Data Exploration
+
+We’ll select a few columns from Q1_2023 to preview in a temporary table. This will help give us an idea of potential trends and relationships to explore further:
 ```
-percentage <- data.frame(
-  level=c("Sedentary", "Lightly", "Fairly", "Very Active"),
-  minutes=c(sedentary_percentage,lightly_percentage,fairly_percentage,active_percentage)
-)
-
-plot_ly(percentage, labels = ~level, values = ~minutes, type = 'pie',textposition = 'outside',textinfo = 'label+percent') %>%
-  layout(title = 'Activity Level Minutes',
-         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+ SELECT  
+        ride_id,
+        started_at,
+        ended_at,
+        ride_length,
+        day_of_week, 
+        start_station_name,
+        end_station_name,
+        member_casual
+FROM 
+        cyclistic_schema.Q1_2023
+ORDER BY 
+        started_at
 ```
+The above query returned 639,424 rows. That is the number of recorded trips we have data for in this quarter. Let’s dive deeper into those trip totals.
 
-![newplot](https://user-images.githubusercontent.com/62857660/136252582-96e1f52a-dfe0-4247-a882-82d179d9b2b9.png)
-
-
-The American Heart Association and World Health Organization recommend at least 150 minutes of moderate-intensity activity or 75 minutes of vigorous activity, or a combination of both, each week. That means it needs an daily goal of 21.4 minutes of FairlyActiveMinutes or 10.7 minutes of VeryActiveMinutes.
-
-In our dataset, **30 users** met fairly active minutes or very active minutes.
+#### Total Trips
+We’ll create total columns for overall, annual members and casual riders. We’ll also calculate percentages of overall total for both types:
 ```
-active_users <- daily_activity %>%
-  filter(FairlyActiveMinutes >= 21.4 | VeryActiveMinutes>=10.7) %>% 
-  group_by(Id) %>% 
-  count(Id) 
+SELECT
+    COUNT(ride_id) AS TotalTrips,
+    SUM(CASE WHEN COALESCE(member_casual, 'unknown') = 'member' THEN 1 ELSE 0 END) AS TotalMemberTrips,
+    SUM(CASE WHEN COALESCE(member_casual, 'unknown') = 'casual' THEN 1 ELSE 0 END) AS TotalCasualTrips,
+    ROUND((SUM(CASE WHEN member_casual = 'member' THEN 1 ELSE 0 END) * 1.0 / COUNT(ride_id)) * 100, 2) AS MemberPercentage,
+    ROUND((SUM(CASE WHEN member_casual = 'casual' THEN 1 ELSE 0 END) * 1.0 / COUNT(ride_id)) * 100, 2) AS CasualPercentage
+FROM
+    cyclistic_schema.Q1_2023;
 ```
-
 ### Noticeable Day:
 [Back to Analyze](#4-analyze)
 
